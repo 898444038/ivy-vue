@@ -3,32 +3,32 @@ import mock from '@/fake-db/mock.js'
 // Contact
 const data = {
   events: [
-    {
-      id: 1,
-      title: 'My Event',
-      startDate: new Date(new Date() - 1000 * 60 * 60 * 24 * 3),
-      endDate: new Date(new Date() - 1000 * 60 * 60 * 24 * 2),
-      url: '',
-      classes: 'event-success',
-      label: 'business'
-    }
+    // {
+    //   id: 1,
+    //   title: 'My Event',
+    //   startDate: new Date(new Date() - 1000 * 60 * 60 * 24 * 3),
+    //   endDate: new Date(new Date() - 1000 * 60 * 60 * 24 * 2),
+    //   url: '',
+    //   classes: 'event-success',
+    //   label: 'business'
+    // }
   ],
   labels: [
-    {
-      text: 'Business',
-      value : 'business',
-      color: 'success'
-    },
-    {
-      text: 'Work',
-      value: 'work',
-      color: 'warning'
-    },
-    {
-      text: 'Personal',
-      value: 'personal',
-      color: 'danger'
-    }
+    // {
+    //   text: 'Business',
+    //   value : 'business',
+    //   color: 'success'
+    // },
+    // {
+    //   text: 'Work',
+    //   value: 'work',
+    //   color: 'warning'
+    // },
+    // {
+    //   text: 'Personal',
+    //   value: 'personal',
+    //   color: 'danger'
+    // }
   ]
 }
 

@@ -84,7 +84,7 @@
                 <vs-dropdown vs-trigger-click class="ml-auto md:block hidden cursor-pointer">
                   <vs-button radius icon="icon-settings" icon-pack="feather" />
 
-                  <vs-dropdown-menu class="w-32">
+                  <vs-dropdown-menu class="w-32" style="display:none">
                     <vs-dropdown-item>
                       <div @click="$router.push('/pages/profile').catch(() => {})" class="flex items-center">
                         <feather-icon icon="UserIcon" class="inline-block mr-2" svgClasses="w-4 h-4" />

@@ -17,7 +17,7 @@ import themeConfig, { colors } from '@/../themeConfig.js'
 // *From Auth - Data will be received from auth provider
 const userDefaults = {
   uid         : 0,          // From Auth
-  displayName : 'Visitor', // From Auth
+  displayName : 'ppsg', // From Auth
   about       : 'Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie brownie marshmallow.',
   photoURL    : require('@/assets/images/portrait/small/avatar-s-11.jpg'), // From Auth
   status      : 'online',
@@ -84,7 +84,7 @@ const state = {
   starredPages            : navbarSearchAndPinList['pages'].data.filter((page) => page.is_bookmarked),
   theme                   : themeConfig.theme || 'light',
   themePrimaryColor       : colors.primary,
-  systemTitle             : 'ivy',
+  systemTitle             : 'ppsg',
   // Can be used to get current window with
   // Note: Above breakpoint state is for internal use of sidebar & navbar component
   windowWidth: null

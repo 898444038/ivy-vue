@@ -27,7 +27,7 @@
 
     <div class="flex flex-wrap justify-between my-5">
         <vs-checkbox v-model="checkbox_remember_me" class="mb-3">记住密码</vs-checkbox>
-        <router-link to="/pages/forgot-password">忘记密码?</router-link>
+        <!-- <router-link to="/pages/forgot-password">忘记密码?</router-link> -->
     </div>
     <div class="flex flex-wrap justify-between mb-3">
       <!-- <vs-button  type="border" @click="registerUser">注册</vs-button> -->
@@ -41,8 +41,8 @@
 export default {
   data () {
     return {
-      email: '898444038@qq.com',
-      password: 'admin@12345',
+      email: '', //898444038@qq.com
+      password: '', //admin@12345
       checkbox_remember_me: true
     }
   },

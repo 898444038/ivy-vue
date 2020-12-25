@@ -44,7 +44,7 @@ const router = new Router({
         // =============================================================================
         {
           path: '/',
-          redirect: '/dashboard/analytics'
+          redirect: '/tools/virtualCombat'
         },
         {
           path: '/dashboard/analytics',
@@ -62,8 +62,78 @@ const router = new Router({
             rule: 'admin'
           }
         },
-
-
+        // =============================================================================
+        // 配置
+        // =============================================================================
+        {
+          path: '/config/combat',
+          name: 'config-combat',
+          component: () => import('./views/config/combat/Combat.vue'),
+          meta: {breadcrumb: [{ title: 'Home', url: '/' }, { title: '配置'}, { title: '战力表', active: true }], pageTitle: '战力表', rule: 'editor'}
+        },
+        {
+          path: '/config/embattle',
+          name: 'config-embattle',
+          component: () => import('./views/config/embattle/Embattle.vue'),
+          meta: {breadcrumb: [{ title: 'Home', url: '/' }, { title: '配置'}, { title: '阵法表', active: true }], pageTitle: '阵法表', rule: 'editor'}
+        },
+        {
+          path: '/config/battleLine',
+          name: 'config-battleLine',
+          component: () => import('./views/config/battleLine/BattleLine.vue'),
+          meta: {breadcrumb: [{ title: 'Home', url: '/' }, { title: '配置'}, { title: '战阵表', active: true }], pageTitle: '战阵表', rule: 'editor'}
+        },
+        {
+          path: '/config/workShop',
+          name: 'config-workShop',
+          component: () => import('./views/config/workShop/WorkShop.vue'),
+          meta: {breadcrumb: [{ title: 'Home', url: '/' }, { title: '配置'}, { title: '工坊表', active: true }], pageTitle: '工坊表', rule: 'editor'}
+        },
+        {
+          path: '/config/checkpoint',
+          name: 'config-checkpoint',
+          component: () => import('./views/config/checkpoint/Checkpoint.vue'),
+          meta: {breadcrumb: [{ title: 'Home', url: '/' }, { title: '配置'}, { title: '关卡表', active: true }], pageTitle: '关卡表', rule: 'editor'}
+        },
+        // =============================================================================
+        // 卡片
+        // =============================================================================
+        {
+          path: '/card/illustrated',
+          name: 'card-illustrated',
+          component: () => import('./views/card/illustrated/illustrated.vue'),
+          meta: {breadcrumb: [{ title: 'Home', url: '/' }, { title: '卡片'}, { title: '图鉴', active: true }], pageTitle: '图鉴', rule: 'editor'}
+        },
+        // =============================================================================
+        // 活动
+        // =============================================================================
+        {
+          path: '/activity/calendar',
+          name: 'activity-calendar',
+          component: () => import('./views/activity/calendar/calendar.vue'),
+          meta: {breadcrumb: [{ title: 'Home', url: '/' }, { title: '活动'}, { title: '活动日历', active: true }], pageTitle: '活动日历', rule: 'editor'}
+        },
+        {
+          path: '/activity/activityChart',
+          name: 'activity-activityChart',
+          component: () => import('./views/activity/activityChart/activityChart.vue'),
+          meta: {breadcrumb: [{ title: 'Home', url: '/' }, { title: '活动'}, { title: '活动图库', active: true }], pageTitle: '活动图库', rule: 'editor'}
+        },
+        // =============================================================================
+        // 工具
+        // =============================================================================
+        {
+          path: '/tools/virtualCombat',
+          name: 'tools-virtualCombat',
+          component: () => import('./views/tools/virtualCombat/virtualCombat.vue'),
+          meta: {breadcrumb: [{ title: 'Home', url: '/' }, { title: '工具'}, { title: '虚战力查询', active: true }], pageTitle: '虚战力查询', rule: 'editor'}
+        },
+        {
+          path: '/tools/warcraftCompare',
+          name: 'tools-warcraftCompare',
+          component: () => import('./views/tools/warcraftCompare/warcraftCompare.vue'),
+          meta: {breadcrumb: [{ title: 'Home', url: '/' }, { title: '工具'}, { title: '战器对比工具', active: true }], pageTitle: '战器对比工具', rule: 'editor'}
+        },
         // =============================================================================
         // Application Routes
         // =============================================================================

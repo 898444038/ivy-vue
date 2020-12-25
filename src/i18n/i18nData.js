@@ -3,6 +3,26 @@ export default {
   cn: {
     Dashboard: '仪表盘',
     eCommerce: 'eCommerce',
+
+    config: '表',
+    combat: '战力表',
+    embattle: '阵法表',
+    battleLine: '战阵表',
+    workShop: '工坊表',
+    checkpoint: '关卡表',
+
+    card: '卡片',
+    illustrated: '图鉴',
+
+    activity: '活动',
+    calendar: '活动日历',
+    activityChart: '活动图库',
+
+    tools: '工具',
+    virtualCombat: '虚战力查询',
+    warcraftCompare: '战器对比工具',
+
+
     Apps: 'Apps',
     Todo: 'Todo',
     Chat: 'Chat',

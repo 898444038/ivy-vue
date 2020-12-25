@@ -6,13 +6,25 @@ export default {
       // DASHBOARDS
       {title: "Analytics Dashboard",        url: "/dashboard/analytics",                icon: "HomeIcon",           is_bookmarked: false},
       {title: "eCommerce Dashboard",        url: "/dashboard/ecommerce",                icon: "HomeIcon",           is_bookmarked: false},
-
+      // 配置
+      {title: "combat", url: "/config/combat", icon: "CheckSquareIcon", is_bookmarked: false},
+      {title: "embattle", url: "/config/embattle", icon: "CheckSquareIcon", is_bookmarked: false},
+      {title: "battleLine", url: "/config/battleLine", icon: "CheckSquareIcon", is_bookmarked: false},
+      {title: "workShop", url: "/config/workShop", icon: "CheckSquareIcon", is_bookmarked: false},
+      // 卡片
+      {title: "illustrated", url: "/card/illustrated", icon: "CheckSquareIcon", is_bookmarked: true},
+      // 卡片
+      {title: "calendar", url: "/activity/calendar", icon: "CheckSquareIcon", is_bookmarked: true},
+      {title: "activityChart", url: "/activity/activityChart", icon: "CheckSquareIcon", is_bookmarked: true},
+      // 工具
+      {title: "virtualCombat", url: "/tools/virtualCombat", icon: "CheckSquareIcon", is_bookmarked: true},
+      {title: "warcraftCompare", url: "/tools/warcraftCompare", icon: "CheckSquareIcon", is_bookmarked: false},
       // APPS
-      {title: "Todo",                       url: "/apps/todo",                          icon: "CheckSquareIcon",    is_bookmarked: true},
-      {title: "Chat",                       url: "/apps/chat",                          icon: "MessageSquareIcon",  is_bookmarked: true},
-      {title: "Email",                      url: "/apps/email",                         icon: "MailIcon",           is_bookmarked: true},
-      {title: "Calendar",                   url: "/apps/calendar/vue-simple-calendar",  icon: "CalendarIcon",       is_bookmarked: true},
-      {title: "E-Commerce Shop",            url: "/apps/eCommerce/shop",                icon: "ShoppingCartIcon",   is_bookmarked: true},
+      {title: "Todo",                       url: "/apps/todo",                          icon: "CheckSquareIcon",    is_bookmarked: false},
+      {title: "Chat",                       url: "/apps/chat",                          icon: "MessageSquareIcon",  is_bookmarked: false},
+      {title: "Email",                      url: "/apps/email",                         icon: "MailIcon",           is_bookmarked: false},
+      {title: "Calendar",                   url: "/apps/calendar/vue-simple-calendar",  icon: "CalendarIcon",       is_bookmarked: false},
+      {title: "E-Commerce Shop",            url: "/apps/eCommerce/shop",                icon: "ShoppingCartIcon",   is_bookmarked: false},
       {title: "E-Commerce Item Detail",     url: "/apps/eCommerce/item",                icon: "SmartphoneIcon",     is_bookmarked: false},
       {title: "E-Commerce Wish List",       url: "/apps/eCommerce/wish-list",           icon: "HeartIcon",          is_bookmarked: false},
       {title: "E-Commerce Checkout",        url: "/apps/eCommerce/checkout",            icon: "CreditCardIcon",     is_bookmarked: false},

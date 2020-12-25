@@ -80,19 +80,12 @@ export default {
         //   time     : this.randomDate({min: 1}),
         //   category : 'danger'
         // },
-        // { index    : 3,
-        //   title    : 'New Mail From Peter',
-        //   msg      : 'Cake sesame snaps cupcake',
-        //   icon     : 'MailIcon',
-        //   time     : this.randomDate({min: 6}),
-        //   category : 'primary'
-        // },
-        { index    : 4,
-          title    : 'Bruce\'s Party',
-          msg      : 'Chocolate cake oat cake tiramisu',
-          icon     : 'CalendarIcon',
-          time     : this.randomDate({hr: 2}),
-          category : 'warning'
+        { index    : 3,
+          title    : 'New Mail From Peter',
+          msg      : 'Cake sesame snaps cupcake',
+          icon     : 'MailIcon',
+          time     : this.randomDate({min: 6}),
+          category : 'primary'
         }
       ],
       settings: {
