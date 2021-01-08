@@ -9,40 +9,77 @@
 
 
 <template>
-  <vx-card class="carousel-example">
-    <div class="swiper-inner">
-      <!-- swiper -->
-      <vs-button class="swiper-button-prev" radius icon-pack="feather" icon="icon-arrow-left"></vs-button>
-      <vs-button class="swiper-button-next" radius icon-pack="feather" icon="icon-arrow-right"></vs-button>
-      <swiper :options="swiperOption" :dir="$vs.rtl ? 'rtl' : 'ltr'" :key="$vs.rtl">
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-39.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-35.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-37.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-38.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-33.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-40.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-32.jpg" alt="banner"></swiper-slide>
-        
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-39.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-35.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-37.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-38.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-33.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-40.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-32.jpg" alt="banner"></swiper-slide>
+  <div>
+    <vx-card class="carousel-example">
+      <div class="swiper-inner">
+        <!-- swiper -->
+        <vs-button class="swiper-button-prev" radius icon-pack="feather" icon="icon-arrow-left"></vs-button>
+        <vs-button class="swiper-button-next" radius icon-pack="feather" icon="icon-arrow-right"></vs-button>
+        <swiper :options="swiperOption" :dir="$vs.rtl ? 'rtl' : 'ltr'" :key="$vs.rtl">
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-39.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-35.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-37.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-38.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-33.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-40.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-32.jpg" alt="banner"></swiper-slide>
+          
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-39.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-35.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-37.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-38.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-33.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-40.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-32.jpg" alt="banner"></swiper-slide>
 
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-39.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-35.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-37.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-38.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-33.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-40.jpg" alt="banner"></swiper-slide>
-        <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-32.jpg" alt="banner"></swiper-slide>
-      
-        <div class="swiper-pagination" slot="pagination"></div>
-      </swiper>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-39.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-35.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-37.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-38.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-33.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-40.jpg" alt="banner"></swiper-slide>
+          <swiper-slide><img class="responsive" src="@/assets/images/pages/carousel/banner-32.jpg" alt="banner"></swiper-slide>
+        
+          <div class="swiper-pagination" slot="pagination"></div>
+        </swiper>
+      </div>
+    </vx-card>
+
+    <vs-row vs-type="flex" vs-justify="center" style="margin-bottom:30px;">
+      <vs-col vs-type="flex" vs-justify="center" vs-align="center" vs-w="12">
+        <vs-button @click="insert" class="btn-margin" type="relief" color="danger" v-show="$acl.check('admin')">新增</vs-button>
+        <vs-button @click="select" class="btn-margin" type="relief">查看详情</vs-button>
+        <vs-button @click="update" class="btn-margin" type="relief" color="danger" v-show="$acl.check('admin')">编辑</vs-button>
+      </vs-col>
+    </vs-row>
+
+    <div v-show="isInsert" style="min-heigth:500px">
+      <vs-row vs-type="flex">
+        <vs-col vs-order="1" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3"><vs-input label-placeholder="武将名称" v-model="general.name"/></vs-col>
+        <vs-col vs-order="2" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3"><vs-input label-placeholder="初始等级" v-model="general.level"/></vs-col>
+        <vs-col vs-order="3" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3" class="flex-end-row-select"><v-select class="flex-end-select" placeholder="请选择父级" v-model="general.parent" :options="[{label: 'Foo', value: 'foo'}]"></v-select></vs-col>
+        <vs-col vs-order="4" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3">insert 4</vs-col>
+      </vs-row>
     </div>
-  </vx-card>
+
+    <div v-show="isSelect">
+      <vs-row vs-type="flex">
+        <vs-col vs-order="1" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3">select 1</vs-col>
+        <vs-col vs-order="2" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3">select 2</vs-col>
+        <vs-col vs-order="3" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3">select 3</vs-col>
+        <vs-col vs-order="4" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3">select 4</vs-col>
+      </vs-row>
+    </div>
+
+    <div v-show="isUpdate">
+      <vs-row vs-type="flex">
+        <vs-col vs-order="1" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3">update 1</vs-col>
+        <vs-col vs-order="2" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3">update 2</vs-col>
+        <vs-col vs-order="3" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3">update 3</vs-col>
+        <vs-col vs-order="4" vs-type="flex" vs-justify="center" vs-align="center" vs-w="3">update 4</vs-col>
+      </vs-row>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -50,10 +87,19 @@
 // https://www.swiper.com.cn/api/start/new.html
 import 'swiper/dist/css/swiper.min.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import vSelect from 'vue-select'
 
 export default {
   data () {
     return {
+      isInsert: false,
+      isSelect: false,
+      isUpdate: false,
+      list:[],
+      general:{
+        name: '',
+        level: 1
+      },
       swiperOption: {
         autoplay: false, //自动切换
         speed: 300, //切换速度
@@ -91,7 +137,7 @@ export default {
         navigation: {
           nextEl: '.swiper-button-next', //前进按钮的css选择器或HTML元素。
           prevEl: '.swiper-button-prev', //后退按钮的css选择器或HTML元素。
-          hideOnClick: true, //点击slide时显示/隐藏按钮
+          hideOnClick: false, //点击slide时显示/隐藏按钮
           disabledClass: 'my-button-disabled', //前进后退按钮不可用时的类名。
           hiddenClass: 'my-button-hidden' //按钮隐藏时的Class
         },
@@ -115,8 +161,26 @@ export default {
     }
   },
   components: {
+    'v-select': vSelect,
     swiper,
     swiperSlide
+  },
+  methods:{
+    insert () {
+      this.isInsert = true
+      this.isSelect = false
+      this.isUpdate = false
+    },
+    select () {
+      this.isInsert = false
+      this.isSelect = true
+      this.isUpdate = false
+    },
+    update () {
+      this.isInsert = false
+      this.isSelect = false
+      this.isUpdate = true
+    }
   }
 }
 </script>
@@ -138,5 +202,16 @@ export default {
   [dir] .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
     width: 16px !important;
     height: 16px !important;
+  }
+
+  .btn-margin{
+    margin: 0 5px;
+  }
+
+  .flex-end-row-select{
+    align-items: flex-end !important;
+  }
+  .flex-end-select{
+    width: 100%;
   }
 </style>
