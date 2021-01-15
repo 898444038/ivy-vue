@@ -177,7 +177,7 @@ export default {
           // position4: {},
           // position5: {}
         }
-      },
+      }
       // swiperOption: {
       //   autoplay: false, //自动切换
       //   speed: 300, //切换速度
