@@ -379,10 +379,13 @@ export default {
       _this.$vs.loading()
       _this.$http.post(_this.saveUrl, data).then(response => {
         if (response.data.code === 1) {
-          console.log(_this.saveUrl, response)
+          //console.log(_this.saveUrl, response)
+          _this.$vs.notify({text: response.data.msg, iconPack: 'feather', icon: 'icon-alert-circle', color: 'success' })
+        } else {
+          _this.$vs.notify({text: response.data.msg, iconPack: 'feather', icon: 'icon-alert-circle', color: 'danger' })
         }
-        _this.$vs.close()
-      }).catch(error => { console.log(error); _this.$vs.close() })
+        _this.$vs.loading.close()
+      }).catch(error => { console.log(error); _this.$vs.loading.close() })
     }
   }
 }
