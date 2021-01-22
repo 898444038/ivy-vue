@@ -24,6 +24,7 @@
     <vs-row vs-type="flex" vs-justify="center" style="margin-bottom:30px;">
       <vs-col vs-type="flex" vs-justify="left" vs-align="left" vs-w="12">
         <vs-button @click="insert" class="btn-margin" type="relief" color="danger" v-show="$acl.check('admin')">新增</vs-button>
+        <vs-button @click="refresh" class="btn-margin" type="relief" color="danger" v-show="$acl.check('admin')">刷新三维</vs-button>
         <!-- <vs-button @click="select" class="btn-margin" type="relief">查看详情</vs-button> -->
         <!-- <vs-button @click="update" class="btn-margin" type="relief" color="danger" v-show="$acl.check('admin')">编辑</vs-button> -->
       </vs-col>
@@ -156,6 +157,7 @@ export default {
       weaponList:[],
       dicUrl: '/ppsg/general/getDic',
       saveUrl: '/ppsg/general/save',
+      refreshUrl: '/ppsg/general/updateAllThree',
       General4_list: [],
       Gender_list: [],
       Country_list: [],
@@ -271,9 +273,9 @@ export default {
         level:1,
         parent:{label: '庞统', value: 2013},
         gender:{label: '男', value:1},
-        force:'111',
-        intellect:'222',
-        troops:'333',
+        force:'460',
+        intellect:'712',
+        troops:'616',
         country:{label:'蜀', value:2},
         star:{label:'五星钻卡', value:5},
         arms:{label:'骑', value:3},
@@ -311,6 +313,18 @@ export default {
     },
     delWeapon (index) {
       this.weaponList.splice(index, 1)
+    },
+    refresh () {
+      const _this = this
+      _this.$vs.loading()
+      _this.$http.post(_this.refreshUrl, {}).then(response => {
+        if (response.data.code === 1) {
+          _this.$vs.notify({text: response.data.msg, iconPack: 'feather', icon: 'icon-alert-circle', color: 'success' })
+        } else {
+          _this.$vs.notify({text: response.data.msg, iconPack: 'feather', icon: 'icon-alert-circle', color: 'danger' })
+        }
+        _this.$vs.loading.close()
+      }).catch(error => { console.log(error); _this.$vs.loading.close() })
     },
     save () {
       const _this = this
