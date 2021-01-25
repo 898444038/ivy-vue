@@ -4,10 +4,22 @@
 
 <template>
   <div>
+    <!-- <div id="faq-page">
+      <div class="faq-jumbotron">
+        <div class="faq-jumbotron-content lg:p-32 md:p-24 sm:p-16 p-8 rounded-lg mb-base">
+          <h1 class="mb-1 text-white">虚战力查询</h1>
+          <p class="text-white">Bonbon sesame snaps lemon drops marshmallow ice cream carrot cake croissant wafer.</p>
+          <vs-input placeholder="Search" v-model="faqSearchQuery" icon-pack="feather" icon="icon-search" size="large" class="w-full mt-6" icon-no-border />
+        </div>
+      </div>
+    </div> -->
     <vs-row vs-type="flex" vs-justify="center" style="margin-bottom:30px;">
-      <vs-col vs-type="flex" vs-justify="left" vs-align="left" vs-w="12">
-        <v-select multiple class="flex-end-select" placeholder="请选择武将" v-model="select_general" :options="generalList"></v-select>
-        <vs-button @click="query" class="btn-margin" type="relief" color="danger">查询</vs-button>
+      <vs-col vs-type="flex" vs-justify="left" vs-align="left" vs-w="2"></vs-col>
+      <vs-col vs-type="flex" vs-justify="left" vs-align="left" vs-w="7">
+        <v-select multiple class="flex-end-select w-full mt-6" placeholder="请选择武将" v-model="select_general" :options="generalList"></v-select>
+      </vs-col>
+      <vs-col vs-type="flex" vs-justify="left" vs-align="left" vs-w="3">
+        <vs-button @click="query" class="btn-margin" size="small" type="relief" style="height: 37px;margin-left: 10px;margin-top: 21px;">查询</vs-button>
       </vs-col>
     </vs-row>
   </div>
@@ -52,6 +64,7 @@ export default {
       }
       //console.log('params', params)
       _this.$http.post(_this.queryUrl, params).then(response => {
+        console.log('response', response.data.data)
         if (response.data.code === 1) {
           _this.$vs.notify({text: response.data.msg, iconPack: 'feather', icon: 'icon-alert-circle', color: 'success' })
         } else {
