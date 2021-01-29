@@ -17,7 +17,20 @@
     <div class="vx-row">
       <div class="vx-col w-full md:w-2/5 lg:w-1/4 rounded-lg">
         <vx-card>
-          <h4>筛选</h4>
+          <h4>查询条件</h4>
+          <vs-divider></vs-divider>
+          <ul class="centerx">
+            <li><vs-radio v-model="form.type" vs-value="1">仅包含选择的武将</vs-radio></li>
+            <li><vs-radio v-model="form.type" vs-value="2">包含部分选择的武将</vs-radio></li>
+            <!-- <li><vs-radio v-model="form.type" vs-value="0">全部武将</vs-radio></li> -->
+          </ul>
+          <vs-divider></vs-divider>
+          <div>
+            <vs-input-number min="10" max="100" v-model="form.size" label="结果条数：" style="width: max-content;"/>
+          </div>
+        </vx-card>
+        <vx-card style="margin-top:20px;">
+          <h4>结果筛选</h4>
           <ul class="faq-topics mt-4">
             <li v-for="category in categories" :key="category.id" class="p-2 font-medium flex items-center" @click="faqFilter = category.id">
               <div class="h-3 w-3 rounded-full mr-2" :class="'bg-' + category.color"></div><span class="cursor-pointer">{{ category.name }}</span>
@@ -28,7 +41,7 @@
 
       <!-- FAQ COL -->
       <div class="vx-col w-full md:w-3/5 lg:w-3/4 mt-12 md:mt-0">
-        <vs-collapse  type="margin" class="p-0">
+        <vs-collapse type="margin" class="p-0">
           <vs-collapse-item v-for="(que,index) in filteredFaq" style="background-color: #fff;" class="faq-bg rounded-lg" :class="{'mt-0': !index}" :key="que.id">
             <div slot="header">
               <h5>
@@ -61,7 +74,7 @@
                     <vs-td :data="tr.intellect"> {{ tr.intellect }} </vs-td>
                     <vs-td :data="tr.troops"> {{ tr.troops }} </vs-td>
                     <vs-td :data="tr.combat"> {{ tr.combat }} </vs-td>
-                    <vs-td></vs-td>
+                    <vs-td :data="tr.warpathName"> {{ tr.warpathName }} </vs-td>
                   </vs-tr>
                 </template>
               </vs-table>
@@ -131,44 +144,57 @@
                   <vs-th>战器强化三维</vs-th>
                   <vs-th>战器淬炼三维</vs-th>
                   <vs-th>战器专属三维</vs-th>
-                  <vs-th>战器淬炼效果1</vs-th>
-                  <vs-th>战器淬炼效果2</vs-th>
+                  <vs-th>战器淬炼效果1/战器淬炼效果2</vs-th>
                 </template>
                 <template slot-scope="{data}">
                   <vs-tr :key="indextr" v-for="(tr, indextr) in data">
                     <vs-td class="td-center-0" :data="tr.generalNamex"> {{ tr.generalNamex }} </vs-td>
+                    <vs-td> {{ tr.weaponName }} </vs-td>
+                    <vs-td> {{ tr.weaponBaseThree }} </vs-td>
+                    <vs-td> {{ tr.weaponStrengthenThree }} </vs-td>
+                    <vs-td> {{ tr.weaponQuenchingThree }} </vs-td>
+                    <vs-td> {{ tr.weaponExclusiveThree }} </vs-td>
+                    <vs-td> {{ tr.weaponQuenchingName }} </vs-td>
                   </vs-tr>
                 </template>
               </vs-table>
 
-              <vs-table :data="que.itemList" search >
+              <vs-table :data="que.symbolList" search >
                 <template slot="header"><h3>兵符</h3></template>
                 <template slot="thead">
-                  <vs-th>武将名称</vs-th>
-                  <vs-th>战器名称</vs-th>
-                  <vs-th>战器基础三维</vs-th>
-                  <vs-th>战器强化三维</vs-th>
-                  <vs-th>战器淬炼三维</vs-th>
-                  <vs-th>战器专属三维</vs-th>
-                  <vs-th>战器淬炼效果1</vs-th>
-                  <vs-th>战器淬炼效果2</vs-th>
+                  <vs-th>兵符类型名称</vs-th>
+                  <vs-th>兵符主属性</vs-th>
+                  <vs-th>兵符副属性1</vs-th>
+                  <vs-th>兵符副属性2</vs-th>
+                  <vs-th>兵符副属性3</vs-th>
+                  <vs-th>兵符副属性4</vs-th>
                 </template>
                 <template slot-scope="{data}">
                   <vs-tr :key="indextr" v-for="(tr, indextr) in data">
-                    <vs-td class="td-center-0" :data="tr.generalNamex"> {{ tr.generalNamex }} </vs-td>
+                    <vs-td :data="tr.typeName"> {{ tr.typeName }} </vs-td>
+                    <vs-td :data="tr.mainName"> {{ tr.mainName }} </vs-td>
+                    <vs-td :data="tr.secondName1"> {{ tr.secondName1 }} </vs-td>
+                    <vs-td :data="tr.secondName2"> {{ tr.secondName2 }} </vs-td>
+                    <vs-td :data="tr.secondName3"> {{ tr.secondName3 }} </vs-td>
+                    <vs-td :data="tr.secondName4"> {{ tr.secondName4 }} </vs-td>
                   </vs-tr>
                 </template>
               </vs-table>
 
-              阵法、工坊、被动战力
               <vs-table :data="que.itemList" search >
-                <template slot="header"><h3>其他</h3></template>
+                <template slot="header"><h5>工坊战力：{{que.workshopCombat}}</h5></template>
                 <template slot="thead">
                   <vs-th>武将名称</vs-th>
+                  <vs-th>战器被动战力</vs-th>
+                  <vs-th>命格被动战力</vs-th>
+                  <vs-th>阵法被动战力</vs-th>
                 </template>
                 <template slot-scope="{data}">
                   <vs-tr :key="indextr" v-for="(tr, indextr) in data">
                     <vs-td class="td-center-0" :data="tr.generalNamex"> {{ tr.generalNamex }} </vs-td>
+                    <vs-td :data="tr.passiveCombat1"> {{ tr.passiveCombat1 }} </vs-td>
+                    <vs-td :data="tr.passiveCombat2"> {{ tr.passiveCombat2 }} </vs-td>
+                    <vs-td :data="tr.passiveCombat3"> {{ tr.passiveCombat3 }} </vs-td>
                   </vs-tr>
                 </template>
               </vs-table>
@@ -192,6 +218,10 @@ export default {
       generalUrl: '/ppsg/general/virtualCombat/list',
       queryUrl: '/ppsg/general/virtualCombat/query',
       generalList: [],
+      form: {
+        type: '1',
+        size: '10'
+      },
       select_general: [],
       categories: [
         {
@@ -206,17 +236,17 @@ export default {
         },
         {
           id: 3,
-          name: 'Licenses',
+          name: 'General',
           color: 'success'
         },
         {
           id: 4,
-          name: 'Company usage',
+          name: 'General',
           color: 'warning'
         },
         {
           id: 5,
-          name: 'Trademark use',
+          name: 'General',
           color: 'danger'
         }
       ],
@@ -265,12 +295,15 @@ export default {
     },
     query () {
       const _this = this
+      _this.$vs.loading()
       const ids = []
       for (let i = 0; i < _this.select_general.length; i++) {
         ids.push(_this.select_general[i].value)
       }
       const params = {
-        ids: ids.join(',')
+        ids: ids.join(','),
+        type: _this.form.type,
+        size: _this.form.size
       }
       //console.log('params', params)
       _this.$http.post(_this.queryUrl, params).then(response => {
@@ -282,7 +315,8 @@ export default {
           _this.faqs = []
           _this.$vs.notify({text: response.data.msg, iconPack: 'feather', icon: 'icon-alert-circle', color: 'danger' })
         }
-      }).catch(error => { console.log(error) })
+        _this.$vs.loading.close()
+      }).catch(error => { console.log(error); _this.$vs.loading.close() })
     }
   }
 }
