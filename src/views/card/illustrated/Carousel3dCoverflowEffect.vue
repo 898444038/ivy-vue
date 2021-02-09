@@ -328,6 +328,7 @@ export default {
     },
     save () {
       const _this = this
+      _this.$vs.loading()
       const general = _this.general
 
       const associationList = general.associationList
@@ -390,7 +391,6 @@ export default {
         }
       }
       console.log('data', data)
-      _this.$vs.loading()
       _this.$http.post(_this.saveUrl, data).then(response => {
         if (response.data.code === 1) {
           //console.log(_this.saveUrl, response)
